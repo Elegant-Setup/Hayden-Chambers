@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Piet Mondrian, Victory Boogie Woogie</title>
+	<style>
+		body { /* wall */
+			background:#d6cec1;
+		}
+		#f { /* frame */
+			position: relative;
+			margin:150px auto;
+			background:#ffffff;
+			width:370px;
+			height:370px;
+			overflow: hidden;
+			-ms-transform: rotate(-45deg);
+			-webkit-transform:rotate(-45deg);
+			-moz-transform:rotate(-45deg);
+			transform:rotate(-45deg);
+			box-shadow:-10px 10px 30px rgba(0,0,0,0.2), 0 0 150px rgba(255,255,255,1)
+		}
+		#f:after { /* frame wood */
+			content:'';
+			display:block;
+			position: relative;
+			background:transparent;
+			width:350px;
+			height:350px;
+			overflow: hidden;
+			border:10px solid #f4ede6;
+			box-shadow: inset -3px 3px 20px rgba(0,0,0,0.2)
+		}
+		#g { /* canvas */
+			position:absolute;
+			background:#f5f0ea;
+			width:370px;
+			height:370px;
+			left:0px;
+			top:0px;
+			overflow: hidden;
+			-ms-transform: rotate(45deg);
+			-webkit-transform:rotate(45deg);
+			-moz-transform:rotate(45deg);
+			transform:rotate(45deg);
+		}
+		#g div {
+			position:absolute;
+		}
+		.g {
+			background:#ffffff;
+			width:262px;
+			height:262px;
+			-ms-transform: rotate(-45deg);
+			-webkit-transform:rotate(-45deg);
+			-moz-transform:rotate(-45deg);
+			transform:rotate(-45deg);
+		}
+	</style>
+</head>
+<body>
+
+<div id="f"><div id="g"></div></div>
+
+
+
+
+<script id="h">
+
+//global colors used, the beauty of mondrian is in the negative spaces 
+m = '#d5dec3'; //grey color 	  	 		            	  				   			    						 	  	    	       			      			 				  		  	  			       	 	      		  	  				   		  	 	      	 	     	    	  	 	   	 			 		      		       	 	 	 	   		 	 			 	       	        		  	  		 	  		 	   	     	  	      		  	 	 					 	 	  	    	 	 	    	     
+o = '#aeb2a4'; //light grey color 	          	         	 		     	 			  		 	      		 	 	    	 	 	    		  	 	  	 		    		 			  	  				    	 			  		 	     		  	 	    	 			     	      			  	  			 	 	     		 	    	 	 	   	  	 	 	    			    	 	 	    	 	    	 	   	 	    	      	 			      		   	 	   	 	   	 	       			     	     		    	 	   	 	       			     	     	 	   	 	  	  	     	 			       		 	    	    			 	 	   	   	    	    	 		 			    					 	   	         		  		  	 	 		  			  	      	 	      	 	 	   	  		  			 			    		        		 		   	  		 	   	 	     		        	 			 	  	 	  	  	 	 	   	 	      			  	   	 			  		   	       	 		     			    			 	  	 		        	 	 	    	 	    	 		 	  	 	  	      	   	   	  		   		 	 		 	 		  	      	 	      	 	  			  	   	 	   		    	  	       		  			  	   	 	 	  	      	 	     	    				  	  	 	 	  	      	       	    			  	   	 		   	    	  	       	  	    	 	  	  		 		     	  	     	   	  	  	   	 	 		 	      			     	  		  	 	 		 	 			 		    	  		     					  	  	 	 		  	 	       			      		 	  		 			 		 		 		     			      		 	   	  	   		 			       	 	      	 	   	 	  	  			 				     	         			  		 	  	 			   	     		  	    	  	  	 	    		     	     	  	      	 	 	 			   	 	      		    			      	 		 	   	 	  	     	       		      	 	  	     	  	   		  	     				     	     		  		 	   		  	    	  	     	 	   	 	 	   	  	    	  	   	 	    	 	 	 	   		 		  						     	 		    	  	  	 	 					  					    	 				    	 	  
+n = '#c5b790'; //light gold color  	   			  		 	        	 	      	 	  			  	    	  			      		        			 		 			    		  	 	     	 		     	   	      	   		  	 	      	       	    	  		    	  	 		        	       		  			  	   	  	 		        		      		  				  	  	  	 		        	       		   	 	 	 	 	  			      		 	      	     		      	 	  	        	 	      	   	 		  	  	  			      		         			   	    	 	 	 		       		      	       	    	 		   		      	 		     				   	    	 		 		 	      		 	       		   	 			  	 		 		      		         		  	 		 	  	 		  	     	   	     				  	 			   		 	 		     	  		      		  	        	 			 	       	 	      			 	  				  	 		 		       	 	      	 	 				  		 	 			 	     		 		      		  	 	  			 		 	 		    	   	       	 		   		 		 		 	 		      	  	      	 		  	 	  	 		 	 	 	     	  	      		    		  		 			   		      		        	    	 				 			  	 	     		 	     		     				   		 			       	 		    	 		   	 			   								    		         		   					 	 								      	 	      		  		   			 							     	 			      		   		    		   		  	      		       		  	 		 	 		   		         	 	     	  	 	 	   	 	  	   	       		     	 	   	 	    		  		  		      	       		   		  	  		  		 		      	        	   
+d = '#182ab4'; //blue color  	 	   	  		  	 	    	 			    					  							  		  		      	         			 	    			  	 	 	 	    			      	     	  	 	 	  		 		 	     	  	     	    		 			 	  	  			       			      		  	 		  		  		  	 	      			     	    		 		  	  		  	 	       		     	    			  			  		  	 	       		     	   	   	  		  		  	 	    	  	     		    					 		  	  		 	      		       			 					 		  			   	     	         	 	 					 		 	   		       	          	  			 			  	   	          		      	 		   		    	    	        		       		 	  	 	 		 	   	        			      		 	   			  	 	  			      	 			    	 	 	  		      	  	 	 	     	         			 	    	   	  	 		      	         		  			 			  	  	 		       	        	 		   	  		 	  	 	 	      		       		 	   			 	 	  	 	 	      			      		   				 	  	  			     	   	       				   	  		 	 	 	 		    	   	     	 		   			  	 		   	      	 		     	  		  	 		 	  	 			 		     	         		   		  			 	 			 		      	        		   	 		 	  		  	 	     	         		    			 	 	 	 			  	     		       		   	   				 	 			 		      	 	      		  	  		 	  	 			 		      	 	      	 	 	  		 	  	 		  		     	  	      	   	  		 	  		   		      	  	      	 	 	 			 	  	 			 		       	       	 	 			  	   	 		 	 	      		       	 		    			  	 			 	       		       		 	   	 	   		   	        		       	 		   				  		   	        			      	 		  					  		    	       			      		 	  					  		 	         		 	     		   		 	 		  		          	  	     	 		  						   	 		 			      			       		 						   		   		       			      	 	 						   		 	          			      	 	 						   		 		 		      			      	 	  	 	 	   		 	 		       	        		   				    		 	 		     				       		  				     		 	 		       	 	      	 	   				   				        	 		      				  		 	  	 		 			        			      		   		 	  	 	  		 		      	 	      		   			 	   	  		 		        	      		  	     	  			   	    	  	      	   		    	 	  		 		 		      	 	      	 	 				 		  			           		       		  				 		  			 	 	       		       		  		 			 	 			    	    	  		     			  				     				          		       	  	    	  	 			  		       		       	  	    	  	 				          		       	  	  	 	 	  			 	        		 	     		   		 				  					  	      		       	 		    				 					  	      			      	 		  	   		 					  	      			      	 		    	    							       	        		  	   	 			   		  	    	 			    	  		 		 				 	  	 		      	        				  		   	  	  		 		       	 	     	   	     		 	   		  	     	  	     	  	   	 				 	   			      	  	     	   
+r = '#e1cc01'; //yellow color  		 	     	  			     					    		    	  	 	 	  	  			     	   	      			 				      	  			        		      		 	     			  	  			         	      		  				 	    	 	 	       				    		  	  	 	   	  		  	       	 		     	 	   	 			 	  		 		 	     	 		     		   	    			  		  	 	     		 	     	    	 	 				  		  	 	       	      	    		  		 	  		  	 	     	        	   	   	  	   		  	 	     		       	   	   				   		 		       		 	     	 		 	  				   		 		 	      			     	    		 			    		 		 	    		 	     	    	  	 			  	   		        		       		 	  				 	 	   	  	    	  	      		  	  	  	   	  	 	 	    		 	     		     	 	     	  			        	 	     	     	 		 		 	  	 	 	      	 	      			  		   		 	  			       	        	    	        	  			        	       	    	  	   	 	  			        	 	      			 			  	   	  		 		      			     	    					 		 	  		 		      	 	      			  	  				 	 		  		     	 		     	     			 	 	 	 		 	 	     		        	    			 	 	 		    	      		        		  	   		   	 			 		       		      		  	  		 	  	 		 			      	 	      	   	  		 	  		           	  	      		  	 			 	  	 	   		    				     		    			 	 	  	 		 	 	      	 	      	 	 	 		 	   	 			 	        	       		  						   	 			 	        	       		  						   		  	 		      			      	 		   	 	   		  	 	       	 	      		 	  	      		  	  	      	 	      				  	  	 	 		   	        			      		 	 	   	   		    	       			      		 	 	  	 		 	 			  	     	        	  		 	 	  	  	 		 		         	       			 	  	 		 		  			     	 	       		 	   			 	  		 	 		       		       		   		 				 		 	 		      	  	      		  	   	  	 		 	 		      	  	      		  	  		 		 		 	 		       	 	      		  	 			  	 		 	 		        	       	 	 		 		    		 	 		       	 	      	 	 			  	 	 		 	 		       	 	      	 	 						   		 	 	 	      			      		    				   			  	 	      	 	     	 		  	   			 		 			       	 		    	 	    	   	 	 				  		     	         			 	  	     			  		       			      			 	 	   		 		 			         		      		  		 			 	 				 	        			      	 	 			 	  	 			 				       	       		 	    				 		 		 		    		 		    		  		   					 				  	      		       				  	 		 		 								       	       		   		  	   								      	 	      		  	   	    							     		 	       		  		 		  	 							        	       		  					  	 							      	  	      		   		  				     	 	    					    	 	   	  	  	 	   			 	      			      			 	 	 	  		   		  	        	     	    	 							  	    	    					    	 	 	 	       	  	 		       		 	     	 	  		 				 	  		 			    	  	      		   	  	    	 	  	         			      			 	 	   	 	  					     					    	 	   		 	   		 	 	  		     	 	      	 	  	  		 			 	 	  		      			      			
+i = '#c4a30a'; //gold color 			  	 	   	 	 		    	         				 	 			 	   	  			    	   	       		 	       	  	  	         		       		  	 	 	 	   		  	 	      	 	     	    	 				    		  	 	    	   	     	   	     		   		  	 	      	       	     	    		  			   	       		     	  	  	   		   					       	 		     		 	  			   	 	   	 	      	 	       	 	 					 		  			 		      	         			 					 		 	    			     	         	 	 					 		 	  	  		     	         	 	 					 		 	 	 			      	         	    		 			  	  			        			      			 	     		 	  			       	         			 	  				  	  			       		 	      			 		 	   	 	  			      	 	        			 				  	  	  		 		       		     	   	    	 	  	  		 		        	     	   	  					  	 	 	  	     		       			   	  				 	 						     	 		      		   			 	 	 	 	 		       		       	  	 	  		 	  	 	 	  	     	  	      	 	 	 		     	 			 		      	 	      	 		  		  		 		  	 	      	 		     	 		  	 	   	 		 	 		        		      		   	 	  	  		 			      	        	 	   	      	 		 			       	         		  	 		 	   		 	 		       	 	      	 	 		    	  		 	 		       	 	      	 	  	 	   	 								      	        		   	 				  								      		       		  	   		   							       		       		  	 	   	  							    	  		       		  		 	 	 	 							       	        		  			  	   							      				      		 	    		   							      	         		  		 						   		  	   	  	 	     	     				   	  	 		       	        	 	  	     			  	 		 	     	 	      	    	   		  	  		 	 	     		       	  	
+a = '#bc0b05'; //red color 			  	 	   		 	 	     		       	 	   			  		  	   		      	 	      	    						 	  	  	  	      		       	 	 	    			  	  			      	 	       			 	  		 	   	  			      	  	      			 	 		  	   	  			        		      			 		 	      	  			       			      		  		 			    	  			         	      		  				 			  	  			        		      		  		 			    	 	 	      					    	   	 	  	 	    		  	 	     	 	      	    	 	   		  		  	 	      	 	     	    	 				 	  		  	 	      	 	     	   	    	 	   		  	 	     	        	     	   		   			   	     	 		     	 		  	 	   	  				  	     	 		     	 		  			   	 	     	      	 	      	    	    	    		 		 	     	  	     	    	    			 	      	    		  	    	   		   	  		 	    	        	 	      		 	  	   		 	    	       	         		  					 		  		 		 	     	         	   					 		 	     	      	          		 					 		 	  		        	          		 					 		 	 	   	      	         			  	 	   	 	  	 	 	     	 	       			 	  	   	 	  	 		       			      		  		 			   	  	 		      	         		   	 		 		 	  			       	        	    	 	    	 	  			        		       			 	 			 	  	  			        		       			 		  	 	  	  			        			      			 		 			 	 	  			         	       			 			 	 		 	  		 		      			     	   	     		  	  		 		      	       	   	   	  		 	  		 		    	   	    	      			 	 	 	 	   		     	 		     	  	 	  		 	  	 	   		     	  	      		  	  		 	  	 		         	  	       		 			 				 	 		 	 	     	         		  						   	 		  	       			      	 	 						   		            			      		 	   	 	   	 		 		     	   	     			 	  	 	 		 	 	 		 	    	  		     			 	 	   	   	 		          		       			 	    	 	 	 			 		      			      		  	  					 	 			 	       	        		  	 	 	 		 	 			 	       	 	      		  		  	 	  	 			 		       	       	 	 		 		    	 			 		      			      	 	 			  	   	 			 	       	 	      		  				 			 	 			 	       	 	      		 	      	  	 			 	       	 	      		    	 			  	 			  	     		       	 		   	 			  		 	  	      		       	 	   	     	 		  	 	       		       		   	   	   		 	 		       			      		   	 		    		 	 		       	        		   		   	  		 	 		       			      		   	 		 	  	 		  	     	   	        	  	 		 	  	 		 		     	   	      	 	  		 	 		 		  	       	 		      			  	  		 	  		  	 		     	  	      		  	 			 		 		          		 		    	 		 	   		  	 		  	  	      			      				  	  	 	 		 	          			      	 		 	   	 	 		 	          			      		   						  		 	 		       	        		  	  	 		  		 	 		       	 	      		  	 	      		 	 		       			      	 	 	 	 		   		 	 		        	       	 	 		 			 	 		 	 	 	      	        		  			 	 		 		 	 		       	 	      	 		     	 	 		 	 	 	     	  	      		 	   	 	 	 		 	 		       		       	 		  		  	  		 	 	 	      	 	      		 	  					  		 	 	 	      			      		  	   	  	 		 			        			      		  	  		 	  		 			       	  	      		  				     		 		 		      		       		 	      		 			           		       	 	  	  	    								     	         		   	 		 	  				         				     				  			  	  			  		      	  	     	    	     	  				  		   	  	       	 		 		 			 	 			 				      		       	 	 			 	 		 			 				      	 	      		  				     			  		       		       	   							  			  		        		      	 		      		 			 	 	       		       		  						 	 			 				      		       	 		    				 			 	       		 		      	 		    				 			 		 	     	  	      		 	   					 			 		 	     	 		      		 	    				 				  		    		 		      		  	 		     							       		       		  		       							        		      		  		  	 		 							      	 	       		  		 				  							       		       		  			 			  							        	       		  				  		 							       		       	 		      		 							       	 	      		 	   		  	 								      		       	 	 		   	  	     	      				     	 	 		   	 	  	    	 	      		       	     				   	   	 		       		      	    	 		    	   		  	      	 	     	    		    	 	   		  	       	      	    			 		  	   		  	      		      	     			  			  	 		 	      	 	      	 	 	  	 				  	 		       	 		     	 	  	 					 	  		 		       		      	    		 	   		  		 		      	        	    									  	    	     		       		   			 			 	  		   	     		       		   			  		 	 	    		     		       		   		 				 	 	  	  	     		       		  
+ⁿ = '#000000'; //black color 	 	  		   	  			      	         			 	 		 	 	  	  			       	 	      			 	 						  	  			      	         			 			  		   	  			       		       			 	 	 	     		  	 	       	      	    	 		   	  		  	 	       	      	    		    	   		  	 	      	 	     	    		 	 	 	  		  	 	      	       	    			       		  	 	      	       	    			 	 	   		  	 	      	       	    					 		  		  	 	     	        	    					 		  	 		 		     	         		  					 		  					 	     	         	 	 					 		 	   			      	         	 	 			 	    	    	 	     	  	       		 			 	    	   	         		       	 	 	  			   	  	 		      	 	       		  			 	 	  	  	 		       	        	 	  			 	 	 	  			        	 	      			 	   	 		 	  			         	       			 	  	 		  	  			        	 	      			 	 	 	 		 	  			        			      			 	 		 			 	  			         		      			 		       	  			        	 	      			 		 	 		  	  			        			      			 				 	 	 	  			        		       				      	  	  			        	        			   	  	   	 		  		     	  	     	      	  	   		  		       	        	     	 		 		 	 	  	        	 	      	    		  	 	 	 	  	        		       	    		 	 		 		    	       			      		  				 		  	 		   	      		       	 	 					 		 	 	 	  	     	         	 		   	 	   	 		 		      		 	       	 	  					  	 	 	  	      		       				 	  	 		 	 	          	  	     	  	 	 	  			 	 			 		      	 	      	 	 	 		 		  	 			 		      	        	 	 	 					  	 			 		      		       	 	 		  		   	 			 		      	 	      	 	 			 		   	 			 	       			      		  	 	 			  		 	 		       		       	 	 	 			 		 		 	 		       			      	 	 	 			 		 		 	 		       			      	 	 		 	  	  		 	 		       		       	 		   	 	 	 		 	          			      		 	  	  	   		 	 		       	 	      	 	 					 		 		 		 		       	       	 		    	    		 		 		       	       	 	 					 	  			  		       	        	 		       	 			  		       	 	      	 	  	 	 	 	 							       		       		   			 	 	 							       	 	      		  	     	  							       		       		  	  	 		  							       	 	      		  	 	  	 	 							       	 	      		  	 			 		 							       		       		  		  			  							       	        		  			 	  	 							       	 	      		 	   	 	   							       	 	      		   		  				   		  	     	  	     	  	  						 	   		  	      			     	    	 	 	 	 	   		  	      		      	    	 			  		   		  	     	  	     	    		 	 		 	   		  	     	  	     	    			  	 		   		  	      			     	    				  	 	   		  	     	        	    	     			  		 		      	  	     	    	  		   	  		 		      	  	     	    	 			 	 	  		 		       	       	    		 		  		  		 		       	 	     	    	  		   	 	  	        	 	      	 		
+
+//paint image
+var g = document.getElementById('g'),
+	h = document.getElementById('h').textContent.split('\n');
+for(var j=0;j<=10;j++) {
+	var k = h[j]
+	if(k.charCodeAt(13) == 59){
+		var l = (k.split('color')[1]).replace(/ /g,'0').replace(/\t/g,'1').match(/[0-1]{9}/g).map( function(i){ return parseInt( i, 2 ) + 'px' }),
+			b = ['left', 'top', 'width', 'height'];
+		for(var p=0, q = l.length;p<q;p+=4) {
+			var s = document.createElement('div');
+			s.style['backgroundColor'] = window[k[0]];
+			b.map( function(i, x) { s.style[i] = l[p+x]; });
+			g.appendChild(s);
+		}
+	};
+}
+
+//paint diamond border frame
+for(var i=0;i<4;i++) {
+	var s = document.createElement('div');
+	s.setAttribute('class','g');
+	s.style['left'] = i%2 == 0 ? '-131px' : '239px';
+	s.style['top'] = i < 2 ? '-131px' : '239px';
+	g.appendChild(s);
+}
+
+</script>
+</body>
+</html>
